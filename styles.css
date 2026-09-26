@@ -1,6 +1,6 @@
 :root {
-    --text-color: #ffffff;
-    --link-color: #ff0000;
+    --text-color: #aaaaaa;
+    --link-color: #ffffff;
     --background-color: #000000;
 }
 
@@ -8,10 +8,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -34,29 +30,40 @@ a {
     display: flex;
     align-items: center;
     width: fit-content;
+    flex-direction: column;
 }
 
 .hero .name {
+    color: var(--text-color);
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 20px;
 }
 
 .hero .links {
-    margin-left: 0px;
-    margin-right: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .hero .links a {
     border: 1px solid var(--text-color);
     color: var(--text-color);
-    display: inline-block;
     padding: 10px 20px;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .hero .links a:hover {
     border: 1px solid var(--link-color);
     color: var(--link-color);
+}
+
+@media (width < 600px) {
+    .hero .links a span {
+        display: none;
+    }
 }
